@@ -31,7 +31,7 @@
 
   <style>
     body {
-            font-family: 'Oswald', sans-serif;
+            font-family: 'Verdana', sans-serif;
         }
 
         .center {
@@ -43,7 +43,7 @@
             background-image: url("img/people.jpg");
             background-position: right;
             color: #FFFFFF;
-            font-family: 'Anton', sans-serif;
+            /* font-family: 'Anton', sans-serif; */
             margin-bottom: 20px;
             padding: 20px;
         }
@@ -72,15 +72,39 @@
 
         .speakerPic img {
             border: 2px solid #373737;
-            max-width: 200px;
+            height: 200px;
         }
+
+        .timer {
+          /* border-collapse: separate;
+          border-spacing: 10px;  */
+          margin: auto; 
+          justify-content: center;
+          display:flex;
+          flex-wrap:wrap
+        }
+
+        .timer > div {
+          background-color: #f68c37;
+          color: #000000;
+          margin: 10px;
+          padding: 10px;
+          width: 100px;
+        }
+
+        /* .timer td {
+          background-color: #f68c37;
+          color: #000000;
+          padding: 10px;
+          width: 100px;
+        } */
 
         .tito-submit {
           background-color: #000000 !important;
         }
 
         #tito-tito-2-frugal-dudes-fi-summit-2019-1-tickets-embed {
-          font-family: 'Oswald', sans-serif;
+          font-family: 'Verdana', sans-serif;
         }
     </style>
 </head>
@@ -89,28 +113,198 @@
   <div class="header">
     <div class="container">
       <div class="row">
-        <div class="col-sm">
-          <h1 class="orange">#FISummit</h1>
-          <h3>The Online Financial Independence Conference</h3>
-          <h4><span style="font-size: .75em">presented by</span> 2 <span class="orange">Frugal</span> Dude$</h4>
-          <h4>Mar. 5, 6, 7 @ 7pm-9pm ET</h4>
+        <div class="col-sm center">
+          <h1><strong>SKYROCKET YOUR FINANCES FROM THE COMFORT OF YOUR OWN HOME!</strong></h1>
+          <!-- <h1 class="orange">#FISummit</h1> -->
+          <h3 class="orange">FINANCIAL INDEPENDENCE SUMMIT</h3>
+          <!-- <h4><span style="font-size: .75em">presented by</span> 2 <span class="orange">Frugal</span> Dude$</h4> -->
+          <h4>MAR. 5, 6, 7 @ 7PM-9PM ET</h4>
+          <h4>WHEREVER YOU CAN FIND INTERNET</h4>
+          <div class="timer center">
+            <div><h2><strong id="timerDays"></strong></h2>DAYS</div>
+            <div><h2><strong id="timerHours"></strong></h2>HOURS</div>
+            <div><h2><strong id="timerMinutes"></strong></h2>MINUTES</div>
+            <div><h2><strong id="timerSeconds"></strong></h2>SECONDS</div>
+          </div>
+          <!-- <table class='timer'>
+            <tr>
+              <td>
+                <h2><strong id="timerDays"></strong></h2>DAYS
+              </td>
+              <td>
+                <h2><strong id="timerHours"></strong></h2>HOURS
+              </td>
+              <td>
+                <h2><strong id="timerMinutes"></strong></h2>MINUTES
+              </td>
+              <td>
+                <h2><strong id="timerSeconds"></strong></h2>SECONDS
+              </td>
+            </tr>
+          </table> -->
+          <div id="timer"></div>
         </div>
       </div>
     </div>
   </div>
 
   <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="speakerPic">
+          <img src="img/pete.jpg" alt="Mr. Money Mustache" />
+        </div>
+        <h4><strong>MR. MONEY MUSTACHE</strong></h4>
+        <p>Mr Money Mustache is an early retiree who writes about how we can all live a frugal yet Badass life of
+          leisure at <a href="https://www.mrmoneymustache.com" target="_blank">mrmoneymustache.com</a>.
+        </p>
+      </div>
+      <div class="col-sm-4">
+        <div class="speakerPic">
+          <img src="img/brad.jpg" alt="Brad - ChooseFI" />
+        </div>
+        <h4><strong>BRAD - CHOOSEFI</strong></h4>
+        <p>Brad Barrett is a CPA and co-host of the admirable ChooseFI podcast, inviting others into the Financial
+          Independence movement through their hard work at
+          <a href="https:/choosefi.com" target="_blank">choosefi.com</a>.
+        </p>
+      </div>
+      <div class="col-sm-4">
+        <div class="speakerPic">
+          <img src="img/pof.jpg" alt="Physician on FIRE" />
+        </div>
+        <h4><strong>PHYSICIAN ON FIRE</strong></h4>
+        <p>Physician on FIRE is an anesthesiologist who attained financial independence at age 39 and continues to
+          write about personal finance, early retirement, medicine, and miscellany at <a href="https://www.physicianonfire.com"
+            target="_blank">physicianonfire.com</a>.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="speakerPic">
+          <img src="img/gwen.jpg" alt="Gwen - FIRE Drill Podcast" />
+        </div>
+        <h4><strong>GWEN - FIRE DRILL PODCAST</strong></h4>
+        <p>Gwen is co-host of the FIRE Drill podcast, giving a female voice to real estate investing,
+          starting an online business, full time travel and more at <a href="https://firedrillpodcast.com" target="_blank">firedrillpodcast.com</a>.
+        </p>
+      </div>
+      <div class="col-sm-4">
+        <div class="speakerPic">
+          <img src="img/jillian.jpg" alt="Jillian - Montana Money Adventures" />
+        </div>
+        <h4><strong>JILLIAN - MONTANA MONEY ADVENTURES</strong></h4>
+        <p>Jillian is a writer, creator and mentor helping people custom design their best life with passion +
+          passive income at
+          <a href="https://www.montanamoneyadventures.com/" target="_blank">montanamoneyadventures.com</a>.
+        </p>
+      </div>
+      <div class="col-sm-4">
+        <div class="speakerPic">
+          <img src="img/alex-cassie.jpg " alt="The Thrifty Couple" />
+        </div>
+        <h4><strong>THE THRIFTY COUPLE</strong></h4>
+        <p>The Thrifty Couple has seen it all, digging out of payday loans and now encouraging others no matter where
+          they
+          are in their financial journey to succeed in achieving their financial goals at <a href="https://thethriftycouple.com"
+            target="_blank">thethriftycouple.com</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm" style="border: 1px solid #f68c37; padding: 0px">
+        <div style="background-color: #f68c37;margin-bottom:20px; color: #FFFFFF">
+          <h3 style="padding: 5px;">DAY 1 - FICHOLOGY</h3>
+        </div>
+        <div style="padding: 0px 10px">
+          <h4><strong>Starting Your FI Journey</strong></h4>
+          <p>7:00pm ET | Brad - ChooseFI</p>
+          <p>So, you've heard about this awesome financial independence concept but don't know where to start!
+            In this session we’ll clear through the information overload and give you some stepping stones to help you
+            get started on the right foot.
+            Let’s get your mind right, accept where you are today and set some goals to keep you motivated on the
+            journey
+            ahead.</p>
+        </div>
+        <hr style="border-color: #f68c37; height: 2px" />
+        <div style="padding: 0px 10px">
+          <h4><strong>Key Strategies to Prepare Your Family for FI</strong></h4>
+          <p>8:00pm ET | The Thrifty Couple</p>
+          <p>If financial independence is even in your sights, there’s prerequisites you’ll need to take care of now
+            that
+            can speed up the process.
+            We’ll discuss how we found ourselves in a financial pit of debt despair yet found a way to dig ourselves
+            out
+            quickly using an innovative debt payoff approach -
+            breaking it down step by step. We’ll share some key life strategies we learned along the way that you can
+            use
+            to help decrease the stress in your home,
+            make your family a well-oiled financial machine, and prepare you to more successfully implement the tips
+            shared through the rest of this conference.</p>
+        </div>
+      </div>
+      <div class="col-sm" style="border: 1px solid #f68c37; padding: 0px">
+        <div style="background-color: #f68c37;margin-bottom:20px; color: #FFFFFF">
+          <h3 style="padding: 5px;">DAY 2 - THE JOURNEY</h3>
+        </div>
+        <div style="padding: 0px 10px">
+          <h4><strong>The Power of a Life With Financial Independence</strong></h4>
+          <p>7:00pm ET | Gwen - FIRE Drill Podcast</p>
+          <p>The power of FI doesn't start when you reach your "FI Number." You will start experiencing the powers of
+            Financial Independence from the very beginning of your journey and it only grows more powerful as you
+            progress. Join Gwen to hear how the Power of FI has given her increased flexibility and more freedom
+            throughout her path to Financial Independence. Power up with FI!!</p>
+        </div>
+        <hr style="border-color: #f68c37; height: 2px" />
+        <div style="padding: 0px 10px">
+          <h4><strong>FIRE with Children: How Kids Can Both Complicate and Improve Your Early Retirement</strong></h4>
+          <p>8:00pm ET | Physician on FIRE</p>
+          <p>When you're young and single, you don't need a lot of money. You get married and buy a home, and you need
+            a bit more. When kids enter the picture, you've got a whole new set of expenses for 20 years or more. We'll
+            talk about how raising children alters the FI math, how to plan for college costs, and how kids can
+            motivate you to reach FI sooner while giving you a wonderful something to devote yourself to in early
+            retirement.</p>
+        </div>
+      </div>
+      <div class="col-sm" style="border: 1px solid #f68c37; padding: 0px">
+        <div style="background-color: #f68c37;margin-bottom:20px; color: #FFFFFF">
+          <h3 style="padding: 5px;">DAY 3 - FIRE & BEYOND</h3>
+        </div>
+        <div style="padding: 0px 10px">
+          <h4><strong>Custom Design a Life You Never Want to Retire From</strong></h4>
+          <p>7:00pm ET | Jillian - Montana Money Adventures</p>
+          <p>How to combine passive and passion income to intentionally design your best life. By focusing on which
+            elements of life bring meaning and happiness to you, you can creatively problem solve to obtain your “best
+            life” much faster. Jillian has created a process to build a life she’ll never want to retire from and wants
+            to help you discover yours.</p>
+        </div>
+        <hr style="border-color: #f68c37; height: 2px" />
+        <div style="padding: 0px 10px">
+          <h4><strong>WHY Financial Independence + AMA</strong></h4>
+          <p>8:00pm ET | Mr. Money Mustache</p>
+          <p>Mustachians Unite!!! In this session we'll talk about WHY financial independence is so helpful in living a
+            good life and WHY I spend so much time teaching it. Following the WHY discussion, I want to help answer
+            your HOW questions about Financial Independence, LIVE! Ask Me Anything!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="margin-top: 50px">
     <div class="row" style="margin-bottom: 20px">
       <div class="col-sm-8">
-        <h1>We're bringing the Financial Independence <strong>Movement</strong> to you!</h1>
+        <h1>We're bringing the Financial Independence <strong>Experts</strong> to you!</h1>
         <p>Financial Independence is empowering people around the world with the knowledge to control their own
           life, on their own terms.
           We've brought together some of the best, most influential leaders in this community to share this
           movement with you
           and motivate those who are already on the journey.</p>
-        <p>Join your fellow FI friends from anywhere in the world to share your story and get new ideas for own
-          FI strategy.
-          We can't wait for #fisummit to reach even more people as the FIRE community spreads!
+        <p>Join your fellow FI friends from anywhere in the world during this <strong>online summit</strong> to share your story and get new ideas for own
+          FI strategy. After work, or on your own time, anyone with an internet connection can attend FI Summit!
         </p>
         <p>
           CHA-CHING! - 2 Frugal Dudes
@@ -122,155 +316,22 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-sm center" style="background-color: #f68c37;margin-bottom:20px;">
-        <h1>Our AMAZING Lineup</h1>
+    <div class="row" style="margin-bottom: 20px">
+      <div class="col-sm-8">
+        <iframe src="https://www.youtube.com/embed/zMv-gGFYenQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen style="width:100%;min-height: 315px"></iframe>
       </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm">
-        <h2>Day 1 - FIchology</h2>
-        <p>Welcome to Financial Independence! FI means different things to different people and preparing your
-          mind, your life and your finances for the journey can
-          be a challenge. Let's unwrap where you are today and take the steps to prepare for the journey
-          ahead.
-        </p>
-        <h3>Brad - ChooseFI</h3>
-        <div class="speakerPic">
-          <img src="img/brad.jpg" alt="Brad" />
-        </div>
-        <div class="social">
-          <a href="https://www.choosefi.com/" target="_blank" class="socialIcon"><img src="img/web.gif" alt="Website" /></a>
-          <a href="https://itunes.apple.com/us/podcast/choosefi-join-the-financial-independence-community/id1187770032?mt=2"
-            target="_blank" class="socialIcon"><img src="img/itunes.gif" alt="iTunes" /></a>
-          <a href="https://www.facebook.com/ChooseFi/" target="_blank" class="socialIcon"><img src="img/facebook.gif"
-              alt="Facebook" /></a>
-          <a href="https://twitter.com/choosefi" target="_blank" class="socialIcon"><img src="img/twitter.gif" alt="Twitter" /></a>
-          <a href="https://www.instagram.com/choosefiradio/" target="_blank" class="socialIcon"><img src="img/instagram.gif"
-              alt="Instagram" /></a>
-          <a href="https://www.pinterest.com/choosefi/" target="_blank" class="socialIcon"><img src="img/pinterest.gif"
-              alt="Pinterest" /></a>
-          <a href="https://www.youtube.com/choosefi" target="_blank" class="socialIcon"><img src="img/youtube.gif" alt="YouTube" /></a>
-        </div>
-        <h4>Starting Your FI Journey</h4>
-        <p>So, you've heard about this awesome financial independence concept but don't know where to start!
-          In this session we’ll clear through the information overload and give you some stepping stones to help you
-          get started on the right foot.
-          Let’s get your mind right, accept where you are today and set some goals to keep you motivated on the journey
-          ahead.</p>
-        <h3>The Thrifty Couple</h3>
-        <div class="speakerPic">
-          <img src="img/alex-cassie.jpg" alt="The Thrifty Couple" />
-        </div>
-        <div class="social">
-          <a href="https://thethriftycouple.com/" target="_blank" class="socialIcon"><img src="img/web.gif" alt="Website" /></a>
-          <a href="http://www.facebook.com/TheThriftyCouple" target="_blank" class="socialIcon"><img src="img/facebook.gif"
-              alt="Facebook" /></a>
-          <a href="http://twitter.com/thriftycouple" target="_blank" class="socialIcon"><img src="img/twitter.gif" alt="Twitter" /></a>
-          <a href="https://itunes.apple.com/us/podcast/take-back-your-finances/id1312708299?mt=2" target="_blank" class="socialIcon"><img
-              src="img/itunes.gif" alt="iTunes" /></a>
-          <a href="http://instagram.com/thriftycouple" target="_blank" class="socialIcon"><img src="img/instagram.gif"
-              alt="Instagram" /></a>
-          <a href="http://pinterest.com/thriftycouple" target="_blank" class="socialIcon"><img src="img/pinterest.gif"
-              alt="Pinterest" /></a>
-        </div>
-        <h4>Key Strategies to Prepare Your Family for FI</h4>
-        <p>If financial independence is even in your sights, there’s prerequisites you’ll need to take care of now that
-          can speed up the process.
-          We’ll discuss how we found ourselves in a financial pit of debt despair yet found a way to dig ourselves out
-          quickly using an innovative debt payoff approach -
-          breaking it down step by step. We’ll share some key life strategies we learned along the way that you can use
-          to help decrease the stress in your home,
-          make your family a well-oiled financial machine, and prepare you to more successfully implement the tips
-          shared through the rest of this conference.</p>
-      </div>
-      <div class="col-sm">
-        <h2>Day 2 - The Journey</h2>
-        <p>You're not alone in your FI goals! We've got plenty of tips and lessons learned along the way to
-          share with you. There are numerous ways to achieve
-          Financial Independence, so discover what methods work best for you and your own unique situation.
-        </p>
-        <h3>Gwen - FIRE Drill Podcast</h3>
-        <div class="speakerPic">
-          <img src="img/gwen.jpg" alt="Gwen" />
-        </div>
-        <div class="social">
-          <a href="https://firedrillpodcast.com/" target="_blank" class="socialIcon"><img src="img/web.gif" alt="Website" /></a>
-          <a href="https://itunes.apple.com/us/podcast/fire-drill/id1276912032?mt=2" target="_blank" class="socialIcon"><img
-              src="img/itunes.gif" alt="iTunes" /></a>
-          <a href="https://www.facebook.com/groups/firedrillpodcast/" target="_blank" class="socialIcon"><img src="img/facebook.gif"
-              alt="Facebook" /></a>
-          <a href="https://twitter.com/fire_podcast" target="_blank" class="socialIcon"><img src="img/twitter.gif" alt="Twitter" /></a>
-          <a href="https://www.instagram.com/fierymillennials/?hl=en" target="_blank" class="socialIcon"><img src="img/instagram.gif"
-              alt="Instagram" /></a>
-        </div>
-        <h4>The Power of a Life With Financial Independence</h4>
-        <p>The power of FI doesn't start when you reach your "FI Number." You will start experiencing the powers of
-          Financial Independence from the very beginning of your journey and it only grows more powerful as you
-          progress.
-          Join Gwen to hear how the Power of FI has given her increased flexibility and more freedom throughout her
-          path to Financial Independence. Power up with FI!!</p>
-        <h3>Physician on FIRE</h3>
-        <div class="speakerPic">
-          <img src="img/pof.jpg" alt="Physician on FIRE" />
-        </div>
-        <div class="social">
-          <a href="https://www.physicianonfire.com/" target="_blank" class="socialIcon"><img src="img/web.gif" alt="Website" /></a>
-          <a href="https://facebook.com/physicianonfire" target="_blank" class="socialIcon"><img src="img/facebook.gif"
-              alt="Facebook" /></a>
-          <a href="https://twitter.com/physicianonfire" target="_blank" class="socialIcon"><img src="img/twitter.gif"
-              alt="Twitter" /></a>
-          <a href="https://www.pinterest.com/physicianon/" target="_blank" class="socialIcon"><img src="img/pinterest.gif"
-              alt="Pinterest" /></a>
-        </div>
-        <h4>FIRE with Children: How kids can both complicate and improve your early retirement</h4>
-        <p>When you're young and single, you don't need a lot of money. You get married and buy a home, and you need a
-          bit more. When kids enter the picture, you've got a whole new set of expenses for 20 years or more. We'll
-          talk about how raising children alters the FI math, how to plan for college costs, and how kids can motivate
-          you to reach FI sooner while giving you a wonderful something to devote yourself to in early retirement.</p>
-      </div>
-      <div class="col-sm">
-        <h2>Day 3 - FIRE & Beyond</h2>
-        <p>Whether FIRE is a number or a goal for you, there are ways to take shortcuts along the way and start
-          living the FIRE life well before you actually FIRE.
-          What else is FIRE about? There's much more to it than just your personal finances.
-        </p>
-        <h3>Jillian - Montana Money Adventures</h3>
-        <div class="speakerPic">
-          <img src="img/jillian.jpg" alt="Jillian" />
-        </div>
-        <div class="social">
-          <a href="https://www.montanamoneyadventures.com/" target="_blank" class="socialIcon"><img src="img/web.gif"
-              alt="Website" /></a>
-          <a href="https://www.facebook.com/montanamoneyadventures/" target="_blank" class="socialIcon"><img src="img/facebook.gif"
-              alt="Facebook" /></a>
-          <a href="https://twitter.com/mtmoneyadventur" target="_blank" class="socialIcon"><img src="img/twitter.gif"
-              alt="Twitter" /></a>
-          <a href="https://www.pinterest.com/montanamoneyadventures/" target="_blank" class="socialIcon"><img src="img/pinterest.gif"
-              alt="Pinterest" /></a>
-        </div>
-        <h4>Custom Design a Life You Never Want to Retire From</h4>
-        <p>How to combine passive and passion income to intentionally design your best life.
-          By focusing on which elements of life bring meaning and happiness to you, you can creatively problem solve to
-          obtain your “best life” much faster.
-          Jillian has created a process to build a life she’ll never want to retire from and wants to help you discover
-          yours.</p>
-        <h3>Mr. Money Mustache</h3>
-        <div class="speakerPic">
-          <img src="img/pete.jpg" alt="Mr. Money Mustache" />
-        </div>
-        <div class="social">
-          <a href="http://www.mrmoneymustache.com/" target="_blank" class="socialIcon"><img src="img/web.gif" alt="Website" /></a>
-          <a href="https://www.facebook.com/mrmoneymustache" target="_blank" class="socialIcon"><img src="img/facebook.gif"
-              alt="Facebook" /></a>
-          <a href="https://twitter.com/mrmoneymustache/" target="_blank" class="socialIcon"><img src="img/twitter.gif"
-              alt="Twitter" /></a>
-        </div>
-        <h4>WHY Financial Independence + AMA</h4>
-        <p>Mustachians Unite!!! In this session we'll talk about WHY financial independence is so helpful in living a
-          good life and WHY I spend so much time teaching it. Following the WHY discussion, I want to help answer your
-          HOW questions about Financial Independence, LIVE! Ask Me Anything!</p>
+      <div class="col-sm-4">
+        <h3>WHAT YOU'LL LEARN</h3>
+        <ul>
+          <li>How to Produce Passive Income</li>
+          <li>How to Retire Early</li>
+          <li>How to Budget</li>
+          <li>How to Invest</li>
+          <li>How to Earn More</li>
+          <li>How to Build a Life of Financial Freedom</li>
+          <li>How to Get Your Time Back</li>
+        </ul>
       </div>
     </div>
 
@@ -285,6 +346,8 @@
         <br />
         <h2><strong>Where? </strong>Over The Internet!</h2>
         <h2><strong>When? </strong>March 5, 6, 7 @7pm-9pm ET</h2>
+        <h4 style="color:red;">Register before <strong>February 15th</strong> to get a FREE copy of The Early Retirement Roadmap!</h4>
+        <img src="img/book.png" alt="The Early Retirement Roadmap Book" />
       </div>
     </div>
 
@@ -384,7 +447,7 @@
                 @media all and (min-width:320px) and (max-width:667px) { #_form_13_._inline-form._inline-style ._inline-style._button-wrapper { margin-top:20px !important; margin-left:0 !important; }
                 }
                
-                #_form_13_._form_13 { font-family:'Oswald', sans-serif; }
+                #_form_13_._form_13 { font-family:'Verdana', sans-serif; }
                </style>
       <form method="POST" action="https://earlyretirementroadmap.activehosted.com/proc.php" id="_form_13_" class="_form _form_13 _inline-form  _dark"
         novalidate>
@@ -762,6 +825,40 @@
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+
+  <!-- Countdown Timer -->
+  <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Mar 5, 2019 00:00:00").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+
+      // Get todays date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the result in the element with id="demo"
+      document.getElementById("timerDays").innerHTML = days;
+      document.getElementById("timerHours").innerHTML = hours;
+      document.getElementById("timerMinutes").innerHTML = minutes;
+      document.getElementById("timerSeconds").innerHTML = seconds;
+
+      // If the count down is finished, write some text 
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  </script>
 </body>
 
 </html>
