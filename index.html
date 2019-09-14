@@ -49,6 +49,7 @@
   <!-- Tito -->
   <script src='https://js.tito.io/v1' async></script>
   <link rel="stylesheet" type="text/css" href='https://css.tito.io/v1.1' />
+  <!-- <script>TitoDevelopmentMode = true</script> -->
 
   <title>Financial Independence Summit | The Summit That Pays You</title>
 
@@ -115,6 +116,17 @@
 
     .tito-submit {
       background-color: #000000 !important;
+    }
+
+    .tito-tickets-button {
+      background-color: #f68c37;
+      border: none;
+    }
+
+    #greenButton > .tito-tickets-button {
+      background-color: green;
+      color: #FFFFFF;
+      border: none;
     }
 
     .video-container {
@@ -309,7 +321,9 @@
         </div>
         <div class="col-sm-4">
           <br />
-          <h3>WHAT YOU'LL LEARN</h3>
+          <div style="margin: auto; margin-bottom: 20px; border-bottom: solid 2px #f68c37; text-align: center">
+            <h3>&nbsp;&nbsp;What You'll Learn&nbsp;&nbsp;</h3>
+          </div>
           <ul>
             <li>How to Produce Passive Income</li>
             <li>How to Retire Early</li>
@@ -327,18 +341,22 @@
       </div>
 
       <div class="row" style="margin-bottom: 20px">
-          <h3 style="margin: auto">WHAT PAST ATTENDEES ARE SAYING</h3>
+        <div style="margin: auto; margin-bottom: 20px; border-bottom: solid 2px #f68c37; text-align: center">
+          <h3>&nbsp;&nbsp;Past Attendees&nbsp;&nbsp;</h3>
+        </div>
+        <!-- <h3 style="margin: auto">WHAT PAST ATTENDEES ARE SAYING</h3> -->
       </div>
 
-      <div class="row" style="margin-bottom: 20px">          
-        <div class="col-sm-5 center">          
+      <div class="row" style="margin-bottom: 20px">
+        <div class="col-sm-5 center">
           <img src="img/kristy.png" alt="Kristy" />
         </div>
-        <div class="col-sm-7 center">        
+        <div class="col-sm-7 center">
           <p style="font-size: 1.3em;">Thank you so much for hosting an online Financial Independence event! I usually
             have to leave my family to
             attend FI functions and this allowed me to stay at home with them to learn together and have important
-            money conversations around our goals. We got to see the best in the business right from our own couch! Please do this again!! -
+            money conversations around our goals. We got to see the best in the business right from our own couch!
+            Please do this again!! -
             <em>Kristy</em>
           </p>
         </div>
@@ -492,7 +510,7 @@
 
     <div class="row">
       <div class="col-sm-4" style="margin-top: 20px; padding: 0; text-align: center; border: 1px solid #000000">
-        <h4 style="padding: 15px; background-color: #d0d0d3;">REPLAY TICKET</h4>
+        <h4 style="padding: 15px; background-color: #f68c37;">REPLAY TICKET</h4>
         <div style="padding: 0px 5px 15px 5px;">
           <h2>$39</h2>
           <h4>INVESTMENT</h4>
@@ -503,13 +521,18 @@
           <div style="text-align: left; margin: 0px 15px">
             <p><span class="oi oi-video" style="color:green"></span> Video Replays</p>
           </div>
-          <a href="https://ti.to/2-frugal-dudes/financial-independence-summit-oct-2019" target="_blank"
-            class="btn btn-lg" style="border:1px solid #000000;color:#000000;margin-top:10px;">Buy
-            E-Ticket</a>
+          <tito-button event="2-frugal-dudes/financial-independence-summit-oct-2019" releases="rvbwb6tj2ae"
+            class="btn btn-lg" style="background-color: #f68c37;color:#000000;margin-top:10px;">Buy E-Ticket
+          </tito-button>
+          <!-- <a href="https://ti.to/2-frugal-dudes/financial-independence-summit-oct-2019" target="_blank"
+            class="btn btn-lg" style="background-color: #f68c37;color:#000000;margin-top:10px;">Buy
+            E-Ticket</a> -->
+          <p><span class="oi oi-lock-locked"></span> <em>Secure Checkout</em></p>
         </div>
       </div>
       <div class="col-sm-4" style="padding: 0; text-align: center; border: 1px solid #000000">
-        <h4 style="padding: 15px; background-color: #f68c37; text-align: center"><strong>LIVE TICKET</strong></h4>
+        <h4 style="padding: 15px; background-color: green; color: #FFFFFF; text-align: center"><strong>LIVE
+            TICKET</strong></h4>
         <div style="padding: 0px 5px 15px 5px;">
           <h2>$59</h2>
           <h4>INVESTMENT</h4>
@@ -533,13 +556,17 @@
             <p><span class="oi oi-tags" style="color:green"></span> Chance to win a signed copy of the book Financial
               Freedom: A Proven Path to All the Money You Will Ever Need</p>
           </div>
-          <a href="https://ti.to/2-frugal-dudes/financial-independence-summit-oct-2019" target="_blank"
-            class="btn btn-lg" style="background-color:#f68c37;color:#000000;margin-top:10px;">Buy
-            E-Ticket</a>
+          <tito-button event="2-frugal-dudes/financial-independence-summit-oct-2019" releases="sgg3p-phd5o"
+            class="btn btn-lg" style="background-color:green;color:#FFFFFF;margin-top:10px;" id="greenButton">Buy E-Ticket
+          </tito-button>
+          <!-- <a href="https://ti.to/2-frugal-dudes/financial-independence-summit-oct-2019" target="_blank"
+            class="btn btn-lg" style="background-color:green;color:#FFFFFF;margin-top:10px;">Buy
+            E-Ticket</a> -->
+          <p><span class="oi oi-lock-locked"></span> <em>Secure Checkout</em></p>
         </div>
       </div>
       <div class="col-sm-4" style="margin-top: 20px; padding: 0; text-align: center; border: 1px solid #000000">
-        <h4 style="padding: 15px; background-color: #d0d0d3; text-align: center">ALL-ACCESS TICKET</h4>
+        <h4 style="padding: 15px; background-color: #f68c37; text-align: center">ALL-ACCESS TICKET</h4>
         <div style="padding: 0px 5px 15px 5px;">
           <h2>$99</h2>
           <h4>INVESTMENT</h4>
@@ -560,15 +587,20 @@
               Frugalwoods: Achieving Financial Independence Through Simple Living</p>
             <p><span class="oi oi-tags" style="color:green"></span> Chance to win a signed copy of the book Financial
               Freedom: A Proven Path to All the Money You Will Ever Need</p>
-            <p><span class="oi oi-question-mark" style="color:green"></span> Pre-Submit Question to a Speaker</p>
-            <p><span class="oi oi-play-circle" style="color:green"></span> Previous FI Summit Replays <em>$49
+            <p><span class="oi oi-question-mark" style="color:green"></span> <strong>Pre-Submit Question to a
+                Speaker</strong></p>
+            <p><span class="oi oi-play-circle" style="color:green"></span> <strong>Previous FI Summit Replays</strong>
+              <em>$49
                 value</em>
             </p>
-            </p>
           </div>
-          <a href="https://ti.to/2-frugal-dudes/financial-independence-summit-oct-2019" target="_blank"
-            class="btn btn-lg" style="border:1px solid #000000;color:#000000;margin-top:10px;">Buy
-            E-Ticket</a>
+          <tito-button event="2-frugal-dudes/financial-independence-summit-oct-2019" releases="nbnzv93-1xs"
+            class="btn btn-lg" style="background-color: #f68c37;;color:#000000;margin-top:10px;">Buy E-Ticket
+          </tito-button>
+          <!-- <a href="https://ti.to/2-frugal-dudes/financial-independence-summit-oct-2019" target="_blank"
+            class="btn btn-lg" style="background-color: #f68c37;;color:#000000;margin-top:10px;">Buy
+            E-Ticket</a> -->
+          <p><span class="oi oi-lock-locked"></span> <em>Secure Checkout</em></p>
         </div>
       </div>
     </div>
@@ -577,7 +609,7 @@
       <div class="col-sm center">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfK820vqzfSSJBdvm7XIzvkFzaI4NkSX0J1f-au36it40t5NQ/viewform?usp=sf_link"
           target="_blank" class="btn btn-lg"
-          style="border:1px solid #000000;color:#FFFFFF;margin-top:10px;background-color:green">Sponsors &
+          style="border:1px solid #000000;color:#FFFFFF;margin-top:10px;background-color:#000000">Sponsors &
           Affiliates</a>
         <a href="./spring19/index.html" target="_blank" class="btn btn-lg"
           style="border:1px solid #000000;color:#000000;margin-top:10px;background-color:#f68c37">Previous FI
