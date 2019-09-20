@@ -58,7 +58,7 @@
         var info = {
           value: data.line_items[0].price,
           product: data.line_items[0].release_title,
-          currency: 'USD',
+          currency: data.line_items[0].currency,
         };
         fbq('track', 'InitiateCheckout', info);
 
@@ -68,8 +68,9 @@
       })
       Tito.on('registration:finished', function(data){
         var info = {
-          currency: data.total,
-          value: data.total
+          currency: data.currency,
+          value: data.total,
+          product: data.line_items[0].release_title
         };
         fbq('track', 'Purchase', info);
       })
