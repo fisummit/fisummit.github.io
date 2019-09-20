@@ -57,7 +57,7 @@
       Tito.on('registration:started', function(data){
         var info = {
           value: data.line_items[0].price,
-          content_ids: data.line_items[0].release_title,
+          product: data.line_items[0].release_title,
           currency: 'USD',
         };
         fbq('track', 'InitiateCheckout', info);
