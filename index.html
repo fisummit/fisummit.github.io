@@ -49,6 +49,29 @@
   <link rel="stylesheet" type="text/css" href='https://css.tito.io/v1.1' />
   <!-- <script>TitoDevelopmentMode = true</script> -->
 
+  <script>
+      var pixel = "1012482909123576";
+      Tito.on('event:landing', function(data){
+        
+      });
+      Tito.on('registration:started', function(data){
+        var info = {
+          content_ids: data.title
+        };
+        fbq('track', 'InitiateCheckout', info);
+      })
+      Tito.on('registration:filling', function(data){
+        
+      })
+      Tito.on('registration:finished', function(data){
+        var info = {
+          currency: data.total,
+          value: data.total
+        };
+        fbq('track', 'Purchase', info);
+      })
+    </script>
+
   <title>Financial Independence Summit | The Summit That Pays You</title>
 
   <style>
