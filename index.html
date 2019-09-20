@@ -56,7 +56,7 @@
       });
       Tito.on('registration:started', function(data){
         var info = {
-          content_ids: data.title
+          content_ids: data.line_items[0].release_title
         };
         fbq('track', 'InitiateCheckout', info);
       })
